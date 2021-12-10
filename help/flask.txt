@@ -1,0 +1,19 @@
+# for Windows
+set FLASK_APP=myworkblog.py
+then
+flask run
+
+# for Everything else including bash
+export FLASK_APP=myworkblog.py
+then
+flask run
+
+# to stop server
+ctrl+c
+
+# Debug mode
+export FLASK_DEBUG=1
+
+# Run using python name.app
+if __name__ == '__main__':
+    app.run(debug=True)
