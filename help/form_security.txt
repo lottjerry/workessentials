@@ -1,0 +1,6 @@
+# when using forms a secret key will protect against modifying cookies and cross site forgery attacks
+app.config['SECRET_KEY'] = ''
+
+# to get secret key go to python interpreter
+import secrets
+secrets.token_hex(16) # 16 is just the number of bytes
