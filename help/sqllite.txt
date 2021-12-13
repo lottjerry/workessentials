@@ -1,0 +1,27 @@
+go to interpreter
+
+from workessentials import db
+
+#Create all talbles and rows
+db.create_all()
+
+# Import Models
+
+from workessentials import User, Post
+
+# Create Instances
+user_1 = User(username='jlott', email='j@j.com', password='password')
+db.session.add(user_1)
+# You can commit this process multiple times adding many users
+
+#Finally 
+db.session.commit()
+
+#How to query all the users
+User.query.all()
+
+# How to query first user
+User.query.first()
+
+# To delete all data (drop all tables and rows)
+db.drop_all()
