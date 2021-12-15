@@ -4,3 +4,20 @@ app.config['SECRET_KEY'] = ''
 # to get secret key go to python interpreter
 import secrets
 secrets.token_hex(16) # 16 is just the number of bytes
+
+# Hashing Passwords
+go to python interpreter
+
+from flask_bcrypt import flask_bcrypt
+bcrypt = Bcrypt()
+bcrypt.generate_password_hash('testing') # get hashed in bytes
+bcrypt.generate_password_hash('testing').decode('utf-8') # get hashed in a string
+
+# Method call check password hash to check if the hash passwords is equal
+hashed_pw = bcrypt.generate_password_hash('testing')
+
+# Checked hashed password to password
+bcrypt.check_password_hash(hashed_pw, 'password')
+output = False
+bcrypt.check_password_hash(hashed_pw, 'testing')
+output = True
