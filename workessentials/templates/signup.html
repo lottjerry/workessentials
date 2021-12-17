@@ -2,7 +2,7 @@
 {% import "bootstrap/wtf.html" as wtf %}
 
 {% block title %}
-Sign Up
+Work Essentials - Sign Up
 {% endblock %}
 
 {% block styles %}
@@ -16,10 +16,10 @@ Sign Up
   <form class="form-signin" method="POST" action="/signup">
     <h2 class="form-signin-heading">Sign Up</h2>
     {{ form.hidden_tag() }}
-    {{ wtf.form_field(form.username) }}
-    {{ wtf.form_field(form.email) }}
-    {{ wtf.form_field(form.password) }}
-    {{ wtf.form_field(form.confirm_password) }}
+    {{ wtf.form_field(form.username, placeholder='Username') }}
+    {{ wtf.form_field(form.email, placeholder='example@example.com',) }}
+    {{ wtf.form_field(form.password, placeholder='Password') }}
+    {{ wtf.form_field(form.confirm_password, placeholder='Confirm') }}
     <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
   </form>
 

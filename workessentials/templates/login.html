@@ -2,7 +2,7 @@
 {% import "bootstrap/wtf.html" as wtf %} <!-- Functions needed to use wtforms in the template-->
 
 {% block title %}
-Login
+Work Essentials - Login
 {% endblock %}
 
 {% block styles %}
@@ -17,8 +17,8 @@ Login
     <h2 class="form-signin-heading">Please sign in</h2>
     <!-- form.hidden_tag For flask_wtf cross site request forgery token-->
     {{ form.hidden_tag() }} 
-    {{ wtf.form_field(form.username) }}
-    {{ wtf.form_field(form.password) }}
+    {{ wtf.form_field(form.username, placeholder='Username') }}
+    {{ wtf.form_field(form.password, placeholder='Password') }}
     {{ wtf.form_field(form.remember) }}
     <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
   </form>

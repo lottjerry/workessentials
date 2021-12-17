@@ -35,7 +35,7 @@ def login():
                 return redirect(url_for('dashboard'))
         return '<h1> Invalid username or password </h1>'
 
-    return render_template('login.html', form=form)
+    return render_template('login.html', form=form, title='Login')
 
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
