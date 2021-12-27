@@ -26,8 +26,10 @@ def create_app(config_class=Config):
     from workessentials.users.routes import users
     from workessentials.posts.routes import posts
     from workessentials.main.routes import main
+    from workessentials.errors.handlers import errors
     app.register_blueprint(users)
     app.register_blueprint(posts)
     app.register_blueprint(main)
+    app.register_blueprint(errors)
 
     return app
