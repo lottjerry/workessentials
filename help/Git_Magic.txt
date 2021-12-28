@@ -1,0 +1,2 @@
+# creates a local branch from a remote branch and tracks it
+git checkout --track origin/test
