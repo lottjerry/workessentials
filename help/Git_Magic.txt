@@ -1,5 +1,0 @@
-# use git fetch to fetch all remote branches
-git fetch
-
-# creates a local branch from a remote branch and tracks it
-git checkout --track origin/test

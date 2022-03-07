@@ -1,6 +1,0 @@
-# To make your module a package you need init
-
-create a folder the same name as your workessentials.py
-create __init__.py in that folder
-
-#Move everything into your workessentials folder except workessentials.py
